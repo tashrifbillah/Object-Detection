@@ -450,3 +450,5 @@ def main():
         np.savetxt("predicted_image_labels.csv", labels_test, delimiter=',', newline='\n')
 
 main()
+
+
