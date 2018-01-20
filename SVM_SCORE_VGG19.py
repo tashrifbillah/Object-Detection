@@ -47,31 +47,17 @@ for i in range(N):
         M.append(O.flatten())
         non_zero_labels.append(label[i])
 
-    Lt = I
-    (w,h,d) = I.shape
-    box[2] = min(box[2], h - 1)
-    box[3] = min(box[3], w - 1)
+   
+    Plug in the trained CNN Model to extract feature
+    S = L.reshape(1,224,224,3)
+    O = get_output([S])[0]
     
-    Lt[box[1],box[0]:box[2]] = [0,255,0]
-    Lt[box[3],box[0]:box[2]] = [0,255,0]
-    Lt[box[1]:box[3],box[0]] = [0,255,0]
-    Lt[box[1]:box[3],box[2]] = [0,255,0]
-    print(box)
-    print(w)
-    print(h)
-    plt.imshow(Lt)
-    plt.show()
-
-    # Plug in the trained CNN Model to extract feature
-    # S = L.reshape(1,224,224,3)
-    # O = get_output([S])[0]
-    #
-    # M[i,: ]= O.flatten()
+    M[i,: ]= O.flatten()
 
     print(i)
 
-sp.io.savemat("man_feature_1.mat",{"cnn_features":M})
-sp.io.savemat("man_names_1.mat",{"names":label})
+sp.io.savemat("man_feature.mat",{"cnn_features":M})
+sp.io.savemat("man_names.mat",{"names":label})
 
 print("--- Execution time: %s seconds ---" % (time.time() - start_time))
 
