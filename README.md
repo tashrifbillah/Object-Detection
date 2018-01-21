@@ -34,7 +34,7 @@ relevant information from the dataset i.e. image classes, indices, and bounding 
 
 5. Install necessary libraries on the VM
 
-6. Run [q_learning.py](https://github.com/tashrifbillah/Object-Detection/blob/master/q_learning.py] on the VM. This program will
+6. Run [q_learning.py](https://github.com/tashrifbillah/Object-Detection/blob/master/q_learning.py) on the VM. This program will
 train the DQN with weights for optimal bounding box deformation. This might take 6-10 hours depending on the speed of your system. However, a [pre trained DQN](https://drive.google.com/file/d/1ul3_Q9xG8K4MS79x2ECnTx11ocQG6BGy/view?usp=sharing) wait is already provided for testing.
 
 7. Run [SVM_SCORE_VGG16.py](https://github.com/tashrifbillah/Object-Detection/blob/master/SVM_SCORE_VGG16.py) to extract feature from
