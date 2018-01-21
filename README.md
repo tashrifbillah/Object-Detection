@@ -23,16 +23,16 @@ The algorithm was trained on Google Cloud GPU, courtesy of Electrical Engineerin
 # Instruction for running code
 Please see the following instruction for executing the project
 
-1. Download the [VOC 2012 dataset](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/)
+1. Download the [VOC 2012 dataset](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/).
 
 2. Run [extract_data.py](https://github.com/tashrifbillah/Object-Detection/blob/master/extract_data.py) that will extract
-relevant information from the dataset i.e. image classes, indices, and bounding boxes
+relevant information from the dataset i.e. image classes, indices, and bounding boxes.
 
-3. Download the [pre trained CNN](https://drive.google.com/file/d/1_W-lSUUVBQsh0S2HM7bKeJcghtkVcWrL/view?usp=sharing) for feature extraction
+3. Download the [pre trained CNN](https://drive.google.com/file/d/1_W-lSUUVBQsh0S2HM7bKeJcghtkVcWrL/view?usp=sharing) for feature extraction.
 
-4. Follow the [tutorial](https://www.cs.columbia.edu/~smb/classes/f16/guide.pdf) to create your own virtual machine (VM) on Google Cloud GPU. Feel free to use any other GPU you might have access to
+4. Follow the [tutorial](https://www.cs.columbia.edu/~smb/classes/f16/guide.pdf) to create your own virtual machine (VM) on Google Cloud GPU. Feel free to use any other GPU you might have access to.
 
-5. Install necessary libraries on the VM
+5. Install necessary libraries on the VM.
 
 6. Run [q_learning.py](https://github.com/tashrifbillah/Object-Detection/blob/master/q_learning.py) on the VM. This program will
 train the DQN with weights for optimal bounding box deformation. This might take 6-10 hours depending on the speed of your system. However, a [pre trained DQN](https://drive.google.com/file/d/1ul3_Q9xG8K4MS79x2ECnTx11ocQG6BGy/view?usp=sharing) wait is already provided for testing.
